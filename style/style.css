@@ -1,5 +1,5 @@
 :root {
-  --clr-bg: #e5e5e5;
+  --clr-bg: #fff;
   --clr-header: #f0fff0;
   --clr-green: #21b573;
   --clr-white: #fff;
@@ -51,12 +51,14 @@ h1 {
 h2 {
   font-size: 36px;
   font-weight: 700;
+  color: var(--clr-dark-2);
 }
 
 h3 {
   font-size: 24px;
   font-weight: 500;
   line-height: 36px;
+  color: var(--clr-dark-2);
 }
 
 .container {
@@ -81,7 +83,7 @@ h3 {
   padding-top: 24px;
   background-color: var(--clr-header);
   min-height: 100vh;
-  margin-bottom: 42px;
+  margin-bottom: 105px;
 }
 
 /* Navbar */
@@ -163,3 +165,39 @@ h3 {
     font-size: 40px;
   }
 }
+
+/* Feature */
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  text-align: center;
+}
+.feature__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+  margin-bottom: 105px;
+}
+.feature__card {
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 50px 40px;
+  transition: box-shadow 0.3s ease;
+}
+.feature__card:is(:hover, :focus) {
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+.feature__card-image {
+  max-width: 80px;
+  margin-bottom: 22px;
+}
+.feature__card-image.image-small {
+  max-width: 70px;
+}
+
